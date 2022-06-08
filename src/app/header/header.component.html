@@ -1,11 +1,16 @@
-<p>
-    <mat-toolbar color="accent" fxLayout="row" fxLayoutAlign="space-between center">
-        <span>Isaac Gilman Portfolio</span>
-        <div class="header-links">
-            <a href="">About Me</a>
-        </div>
-        <button mat-icon-button class="hamburger" aria-label="Example icon-button with menu icon">
+<mat-toolbar color="accent" fxLayout="row" fxLayoutAlign="space-between center">
+    <div>Isaac Gilman</div>
+    <div class="listcontainer">
+        <ul class="unorderedlistelement" fxLayout="row">
+            <li class="listitemheader">About</li>
+            <li class="listitemheader">Experience</li>
+            <li class="listitemheader">Work Examples</li>
+            <li class="listitemheader">Contact</li>
+        </ul>
+    </div>
+    <div class="mobilelistcontainer" hidden>
+        <button mat-icon-button>
             <mat-icon>menu</mat-icon>
         </button>
-    </mat-toolbar>
-</p>
+    </div>
+</mat-toolbar>
