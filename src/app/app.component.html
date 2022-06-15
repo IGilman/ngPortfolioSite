@@ -1,5 +1,14 @@
-<div fxLayout="column" class="global-container">
-  <app-header></app-header>
-  <app-body fxFlex="1"></app-body>
-  <app-footer></app-footer>
-</div>
+<!-- <div fxLayout="column" class="global-container"> -->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <ul>
+      <li>test</li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    <app-body></app-body>
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- </div> -->

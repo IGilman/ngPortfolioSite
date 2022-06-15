@@ -9,8 +9,28 @@
         </ul>
     </div>
     <div class="mobilelistcontainer" hidden>
-        <button mat-icon-button>
+        <button mat-icon-button (click)="onToggleSidenav()">
             <mat-icon>menu</mat-icon>
         </button>
+        <!-- <mat-sidenav-container class="drawer-container" autosize>
+            <mat-sidenav #drawer class="drawer-sidenav" mode="side">
+                <p>Auto-resizing sidenav</p>
+                <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+                <ul class="unorderedlistelement" fxLayout="row">
+                    <li class="listitemheader">About</li>
+                    <li class="listitemheader">Experience</li>
+                    <li class="listitemheader">Work Examples</li>
+                    <li class="listitemheader">Contact</li>
+                </ul>
+                <button (click)="showFiller = !showFiller" mat-raised-button>
+                    Toggle extra text
+                </button>
+            </mat-sidenav>
+        </mat-sidenav-container>  -->
+
+        <!-- TODO NEXT: Get side nav to work on right side and correctly filled with right list
+            USE Material List????
+        https://material.angular.io/components/sidenav/overview 
+    https://brittanychiang.com/ -->
     </div>
 </mat-toolbar>
