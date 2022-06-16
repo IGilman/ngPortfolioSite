@@ -1,14 +1,17 @@
-<!-- <div fxLayout="column" class="global-container"> -->
-<mat-sidenav-container>
-  <mat-sidenav #sidenav role="navigation">
-    <ul>
-      <li>test</li>
-    </ul>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-    <app-body></app-body>
-    <app-footer></app-footer>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-<!-- </div> -->
+<div fxLayout="column">
+  <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+  <mat-sidenav-container fxFlex="1 0 auto">
+    <mat-sidenav #sidenav role="navigation" position="end">
+      <ul class="unorderedlistelement" fxLayout="column">
+        <li class="listitemheader">About</li>
+        <li class="listitemheader">Experience</li>
+        <li class="listitemheader">Work Examples</li>
+        <li class="listitemheader">Contact</li>
+      </ul>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <app-body></app-body>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <app-footer></app-footer>
+</div>
