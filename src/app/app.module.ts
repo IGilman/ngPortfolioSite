@@ -13,6 +13,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+
+
 
 
 
@@ -31,7 +35,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatCardModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
