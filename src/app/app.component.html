@@ -1,17 +1,17 @@
-<div class="bodycontainer" fxLayout="column">
+<div class="bodycontainer">
   <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
   <mat-sidenav-container>
     <mat-sidenav #sidenav role="navigation" position="end">
-      <ul class="unorderedlistelement" fxLayout="column">
+      <ul class="unorderedlistelement">
         <li class="listitemheader">About</li>
         <li class="listitemheader">Experience</li>
         <li class="listitemheader">Work Examples</li>
         <li class="listitemheader">Contact</li>
       </ul>
     </mat-sidenav>
-    <mat-sidenav-content fxLayout="column" fxLayoutAlign="center center">
+    <mat-sidenav-content>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <app-footer fxFlexOffset="auto"></app-footer>
+  <app-footer></app-footer>
 </div>
