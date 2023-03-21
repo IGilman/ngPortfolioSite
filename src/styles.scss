@@ -1,21 +1,23 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
+//https://m3.material.io/theme-builder#/custom 
+//https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
 @use '@angular/material' as mat;
 
 @include mat.core();
 
 $primary-palette: (
- 50: #e3f7e7,
- 100: #bdecc4,
- 200: #8fdf9e,
- 300: #57d374,
+ 50: #e4f7ed,
+ 100: #bdebd3,
+ 200: #91ddb7,
+ 300: #5dd19b,
  //400 = primary
- 400: #00c853,
- 500: #00bd2f,
- 600: #00ad24,
- 700: #009b15,
- 800: #008a00,
- 900: #006a00,
+ 400: #23c685,
+ 500: #00bb6f,
+ 600: #00ac64,
+ 700: #009956,
+ 800: #00884a,
+ 900: #006834,
  contrast: (
    50: #000000,
    100: #000000,
@@ -31,24 +33,24 @@ $primary-palette: (
 );
 
 $secondary-palette: (
- 50: #efe5fa,
- 100: #d5c0f2,
- 200: #b995eb,
- 300: #9d68e3,
- 400: #8644dd,
- 500: #6e16d6,
- 600: #6310d0,
- //700 = primary
- 700: #5300c8,
- 800: #4300c2,
- 900: #2000ba,
+ 50: #eaf1ed,
+ 100: #d1dbd3,
+ 200: #b4c2b8,
+ 300: #96a99c,
+//400 = primary
+ 400: #7f9687,
+ 500: #698473,
+ 600: #5d7464,
+ 700: #4c6053,
+ 800: #3c4c42,
+ 900: #2a372f,
  contrast: (
     50: #000000,
     100: #000000,
     200: #000000,
     300: #000000,
-    400: #FFFFFF,
-    500: #FFFFFF,
+    400: #000000,
+    500: #000000,
     600: #FFFFFF,
     700: #FFFFFF,
     800: #FFFFFF,

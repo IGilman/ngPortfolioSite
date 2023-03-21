@@ -1,17 +1,11 @@
-<div class="bodycontainer">
-  <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
-  <mat-sidenav-container>
-    <mat-sidenav #sidenav role="navigation" position="end">
-      <ul class="unorderedlistelement">
-        <li class="listitemheader">About</li>
-        <li class="listitemheader">Experience</li>
-        <li class="listitemheader">Work Examples</li>
-        <li class="listitemheader">Contact</li>
-      </ul>
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
-  <app-footer></app-footer>
+<section>
+  <h1>Hi, I'm Isaac</h1>
+  <p>I am a full stack software engineer with over 10 years of experience in the technology world and 3 years of experience as a softwar engineer.</p>
+  <p>Professionally, I am experienced in all things fin-tech especially as it relates to the Mortgage and Title industries.</p>
+  <p>You can find more on my LinkedIn and GitHub or check out some of my projects below.</p>
+  <p>Feel free to email if you have any questions at ENETER EMAIL HERE</p>
+</section>
+
+<div>
+  <app-workexperiencecard></app-workexperiencecard>
 </div>
