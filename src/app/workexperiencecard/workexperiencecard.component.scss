@@ -1,8 +1,16 @@
 .example-card {
-    max-width: 400px;
+    display: flex;
+    flex-direction: row;
+    min-width: 300px;
+    height: 200px;
+    margin: 10px 0;
   }
-  
+
   .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
+    object-fit: contain;
+    border-bottom-left-radius: inherit;
+  }
+
+  .card-content{
+    padding: 10px;
   }

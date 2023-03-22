@@ -2,9 +2,16 @@
 // For more information: https://material.angular.io/guide/theming
 //https://m3.material.io/theme-builder#/custom 
 //https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+
 @use '@angular/material' as mat;
 
 @include mat.core();
+
+.mat-typography{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
 
 $primary-palette: (
  50: #e4f7ed,
