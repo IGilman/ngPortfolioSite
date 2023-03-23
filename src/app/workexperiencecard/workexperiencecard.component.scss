@@ -1,14 +1,31 @@
-.example-card {
+h1{
+  margin: 0;
+}
+
+.desktopcard {
     display: flex;
     flex-direction: row;
-    min-width: 300px;
+    min-width: 350px;
     height: 200px;
     margin: 10px 0;
   }
 
-  .example-header-image {
+  .desktopcardimage {
     object-fit: contain;
     border-bottom-left-radius: inherit;
+  }
+  
+  .mobilecard{
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    height: 300px;
+    margin: 10px 0;
+  }
+  
+  .mobilecardimage {
+    object-fit: cover;
+    height: 200px;
   }
 
   .card-content{

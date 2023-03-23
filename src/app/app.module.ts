@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
+import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
 
 
 
@@ -18,6 +19,7 @@ import {MatCardModule} from '@angular/material/card';
   declarations: [
     AppComponent,
     WorkexperiencecardComponent,
+    ExperienceDetailsComponent,
   ],
   imports: [
     BrowserModule,
