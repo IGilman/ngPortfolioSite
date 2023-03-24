@@ -12,6 +12,8 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
+import { HomeComponent } from './home/home.component';
+import { WorkService } from 'src/services/work.service';
 
 
 
@@ -20,6 +22,7 @@ import { ExperienceDetailsComponent } from './experience-details/experience-deta
     AppComponent,
     WorkexperiencecardComponent,
     ExperienceDetailsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,9 +32,9 @@ import { ExperienceDetailsComponent } from './experience-details/experience-deta
     MatIconModule,
     MatSidenavModule,
     MatDividerModule,
-    MatCardModule
+    MatCardModule,
   ],
-  providers: [],
+  providers: [WorkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

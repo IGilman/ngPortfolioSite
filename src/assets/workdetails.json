@@ -1,0 +1,8 @@
+{
+    "title": "blah test",
+    "subtitle": "subtitle test",
+    "image" : "https://material.angular.io/assets/img/examples/shiba2.jpg",
+    "description" : "description test",
+    "projectUrl": "https://www.freecodecamp.org/",
+    "linkToProjectText": "Link to the Project"
+}

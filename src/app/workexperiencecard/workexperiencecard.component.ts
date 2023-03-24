@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './workexperiencecard.component.html',
   styleUrls: ['./workexperiencecard.component.scss']
 })
-export class WorkexperiencecardComponent {
+export class WorkexperiencecardComponent  {
 
   @Input() title = "title test"
   @Input() subtitle = "subtitle test"
