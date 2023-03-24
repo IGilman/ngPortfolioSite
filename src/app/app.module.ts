@@ -13,7 +13,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
 import { HomeComponent } from './home/home.component';
-import { WorkService } from 'src/services/work.service';
+//import { WorkService } from 'src/services/work.service';
 
 
 
@@ -34,7 +34,7 @@ import { WorkService } from 'src/services/work.service';
     MatDividerModule,
     MatCardModule,
   ],
-  providers: [WorkService],
+ // providers: [WorkService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,19 +1,19 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+// import { HttpClient } from '@angular/common/http';
+// import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+// @Injectable({
+//   providedIn: 'root'
+// })
 
 
-const url: string = ''
-var test: any;
+// const url: string = ''
+// var test: any;
 
-export class WorkService {
+// export class WorkService {
 
-  constructor(private http: HttpClient) { }
+//   constructor(private http: HttpClient) { }
 
-  getWorkDetails() {
-    return this.http.get(url);
-  }
-}
+//   getWorkDetails() {
+//     return this.http.get(url);
+//   }
+// }
