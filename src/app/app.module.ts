@@ -10,10 +10,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
 import { HomeComponent } from './home/home.component';
-//import { WorkService } from 'src/services/work.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,6 +26,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -34,7 +35,7 @@ import { HomeComponent } from './home/home.component';
     MatDividerModule,
     MatCardModule,
   ],
- // providers: [WorkService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

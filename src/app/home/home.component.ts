@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-//import { WorkService } from 'src/services/work.service';
+import { Observable } from 'rxjs';
+import { WorkinfoService } from '../Services/workinfo.service';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,19 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit{
 
 
-  //public constructor(private workService: WorkService){}
+  public constructor(private workinfoService: WorkinfoService){}
 
   test: any;
 
   public ngOnInit(): void {
-    // this.workService.getWorkDetails().subscribe((res) =>{
+    // this.workinfoService.getWorkDetails().subscribe((res: any) =>{
     //   this.test = res;
     //   console.log(this.test)
     // })
+
+    this.test = this.workinfoService.getWorkDetails()
+    console.log('test')
+    console.log(this.test)
   }
 
 }
