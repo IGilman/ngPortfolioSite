@@ -1,33 +1,67 @@
-h1{
-  margin: 0;
+// h1 {
+//   margin: 0;
+// }
+
+// .card-content {
+//   padding: 10px;
+// }
+
+
+@mixin devices ($breakpoint) {
+
+  @if $breakpoint ==tablet {
+    @media only screen and (max-width: 459px) {
+      @content;
+
+      .desktopcard {
+        display: flex;
+        flex-direction: row;
+        min-width: 350px;
+        height: 200px;
+        margin: 10px 0;
+      }
+
+      .desktopcardimage {
+        object-fit: contain;
+        border-bottom-left-radius: inherit;
+      }
+
+    }
+  }
+
+  @if $breakpoint ==mobile {
+    @media only screen and (max-width: 458px) {
+      @content;
+
+      .mobilecard {
+        display: flex;
+        flex-direction: column;
+        min-width: 350px;
+        height: 300px;
+        margin: 10px 0;
+      }
+
+      .mobilecardimage {
+        object-fit: cover;
+        height: 200px;
+      }
+    }
+  }
 }
 
-.desktopcard {
-    display: flex;
-    flex-direction: row;
-    min-width: 350px;
-    height: 200px;
-    margin: 10px 0;
+.responsive {
+  background: yellow;
+  // The normal background color is set to yellow
+
+  @include devices(tablet) {
+    background: lightblue;
   }
 
-  .desktopcardimage {
-    object-fit: contain;
-    border-bottom-left-radius: inherit;
-  }
-  
-  .mobilecard{
-    display: flex;
-    flex-direction: column;
-    min-width: 350px;
-    height: 300px;
-    margin: 10px 0;
-  }
-  
-  .mobilecardimage {
-    object-fit: cover;
-    height: 200px;
-  }
+  @include devices('mobile') {
+    background: aquamarine;
 
-  .card-content{
-    padding: 10px;
+    h1 {
+      color: red;
+    }
   }
+}

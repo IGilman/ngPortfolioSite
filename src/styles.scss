@@ -7,62 +7,58 @@
 
 @include mat.core();
 
-.mat-typography{
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+// .mat-typography {
+//   
+// }
 
 $primary-palette: (
- 50: #e4f7ed,
- 100: #bdebd3,
- 200: #91ddb7,
- 300: #5dd19b,
- //400 = primary
- 400: #23c685,
- 500: #00bb6f,
- 600: #00ac64,
- 700: #009956,
- 800: #00884a,
- 900: #006834,
- contrast: (
-   50: #000000,
-   100: #000000,
-   200: #000000,
-   300: #000000,
-   400: #000000,
-   500: #000000,
-   600: #000000,
-   700: #000000,
-   800: #FFFFFF,
-   900: #FFFFFF,
- )
+    50: #e4f7ed,
+    100: #bdebd3,
+    200: #91ddb7,
+    300: #5dd19b,
+    //400 = primary
+    400: #23c685,
+    500: #00bb6f,
+    600: #00ac64,
+    700: #009956,
+    800: #00884a,
+    900: #006834,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #000000,
+        700: #000000,
+        800: #FFFFFF,
+        900: #FFFFFF,
+    )
 );
 
 $secondary-palette: (
- 50: #eaf1ed,
- 100: #d1dbd3,
- 200: #b4c2b8,
- 300: #96a99c,
-//400 = primary
- 400: #7f9687,
- 500: #698473,
- 600: #5d7464,
- 700: #4c6053,
- 800: #3c4c42,
- 900: #2a372f,
- contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #000000,
-    400: #000000,
-    500: #000000,
-    600: #FFFFFF,
-    700: #FFFFFF,
-    800: #FFFFFF,
-    900: #FFFFFF,
- )
+    50: #eaf1ed,
+    100: #d1dbd3,
+    200: #b4c2b8,
+    300: #96a99c,
+    //400 = primary
+    400: #7f9687,
+    500: #698473,
+    600: #5d7464,
+    700: #4c6053,
+    800: #3c4c42,
+    900: #2a372f,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #FFFFFF,
+        700: #FFFFFF,
+        800: #FFFFFF,
+        900: #FFFFFF,
+    )
 );
 // Plus imports for other components in your app.
 
@@ -97,7 +93,7 @@ $light-theme: mat.define-light-theme((color: (primary: $primary,
             ),
             typography: mat.define-typography-config(),
             density: 0,
-            ));
+        ));
 
 
 @include mat.all-component-themes($light-theme);
@@ -110,11 +106,51 @@ $light-theme: mat.define-light-theme((color: (primary: $primary,
 
 html,
 body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
+    height: 100vh;
+    margin: 0 200px;
+    padding: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+
+@mixin devices ($breakpoint) {
+
+    @if $breakpoint ==tablet {
+        @media only screen and (max-width: 459px) {
+            @content;
+
+            .desktopcard {
+                display: flex;
+                flex-direction: row;
+                min-width: 350px;
+                height: 200px;
+                margin: 10px 0;
+            }
+
+            .desktopcardimage {
+                object-fit: contain;
+                border-bottom-left-radius: inherit;
+            }
+
+        }
+    }
+
+    @if $breakpoint ==mobile {
+        @media only screen and (max-width: 458px) {
+            @content;
+
+            .mobilecard {
+                display: flex;
+                flex-direction: column;
+                min-width: 350px;
+                height: 300px;
+                margin: 10px 0;
+            }
+
+            .mobilecardimage {
+                object-fit: cover;
+                height: 200px;
+            }
+        }
+    }
+}

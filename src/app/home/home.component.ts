@@ -8,12 +8,12 @@ import { WorkinfoService } from '../Services/workinfo.service';
   styleUrls: ['./home.component.scss']
 })
 
-export class HomeComponent implements OnInit{
+export class HomeComponent implements OnInit {
 
 
-  public constructor(private workinfoService: WorkinfoService){}
+  public constructor(private workinfoService: WorkinfoService) { }
 
-  test: any;
+  jobs: any;
 
   public ngOnInit(): void {
     // this.workinfoService.getWorkDetails().subscribe((res: any) =>{
@@ -21,9 +21,7 @@ export class HomeComponent implements OnInit{
     //   console.log(this.test)
     // })
 
-    this.test = this.workinfoService.getWorkDetails()
-    console.log('test')
-    console.log(this.test)
+    this.jobs = this.workinfoService.getWorkDetails()
   }
 
 }
