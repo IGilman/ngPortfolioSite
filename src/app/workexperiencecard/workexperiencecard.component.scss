@@ -6,62 +6,111 @@
 //   padding: 10px;
 // }
 
+$breakpoint: (
+  "mobile": 0,
+  "notmobile": 480px
+);
 
-@mixin devices ($breakpoint) {
-
-  @if $breakpoint ==tablet {
-    @media only screen and (max-width: 459px) {
-      @content;
-
-      .desktopcard {
-        display: flex;
-        flex-direction: row;
-        min-width: 350px;
-        height: 200px;
-        margin: 10px 0;
-      }
-
-      .desktopcardimage {
-        object-fit: contain;
-        border-bottom-left-radius: inherit;
-      }
-
-    }
-  }
-
-  @if $breakpoint ==mobile {
-    @media only screen and (max-width: 458px) {
-      @content;
-
-      .mobilecard {
-        display: flex;
-        flex-direction: column;
-        min-width: 350px;
-        height: 300px;
-        margin: 10px 0;
-      }
-
-      .mobilecardimage {
-        object-fit: cover;
-        height: 200px;
-      }
-    }
+@mixin mobile {
+  @media only screen and (min-width: map-get($breakpoint, "mobile")) {
+    @content;
   }
 }
 
-.responsive {
-  background: yellow;
-  // The normal background color is set to yellow
-
-  @include devices(tablet) {
-    background: lightblue;
-  }
-
-  @include devices('mobile') {
-    background: aquamarine;
-
-    h1 {
-      color: red;
-    }
+@mixin notmobile {
+  @media only screen and (min-width: map-get($breakpoint, "notmobile")) {
+    @content;
   }
 }
+
+.card {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    height: 300px;
+    margin: 10px 0;
+  }
+
+  @include notmobile {
+    display: flex;
+    flex-direction: row;
+    min-width: 350px;
+    height: 200px;
+    margin: 10px 0;
+  }
+}
+
+.image {
+  @include mobile {
+    object-fit: cover;
+    height: 200px;
+  }
+
+  @include notmobile {
+    object-fit: contain;
+    border-bottom-left-radius: inherit;
+  }
+}
+
+
+
+
+// @mixin devices ($breakpoint) {
+
+//   @if $breakpoint ==tablet {
+//     @media only screen and (max-width: 459px) {
+//       @content;
+
+//       .desktopcard {
+//         display: flex;
+//         flex-direction: row;
+//         min-width: 350px;
+//         height: 200px;
+//         margin: 10px 0;
+//       }
+
+//       .desktopcardimage {
+//         object-fit: contain;
+//         border-bottom-left-radius: inherit;
+//       }
+
+//     }
+//   }
+
+//   @if $breakpoint ==mobile {
+//     @media only screen and (max-width: 458px) {
+//       @content;
+
+//       .mobilecard {
+//         display: flex;
+//         flex-direction: column;
+//         min-width: 350px;
+//         height: 300px;
+//         margin: 10px 0;
+//       }
+
+//       .mobilecardimage {
+//         object-fit: cover;
+//         height: 200px;
+//       }
+//     }
+//   }
+// }
+
+// .responsive {
+//   background: yellow;
+//   // The normal background color is set to yellow
+
+//   @include devices(tablet) {
+//     background: lightblue;
+//   }
+
+//   @include devices('mobile') {
+//     background: aquamarine;
+
+//     h1 {
+//       color: red;
+//     }
+//   }
+// }

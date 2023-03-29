@@ -107,50 +107,7 @@ $light-theme: mat.define-light-theme((color: (primary: $primary,
 html,
 body {
     height: 100vh;
-    margin: 0 200px;
+    margin: 0;
     padding: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-
-@mixin devices ($breakpoint) {
-
-    @if $breakpoint ==tablet {
-        @media only screen and (max-width: 459px) {
-            @content;
-
-            .desktopcard {
-                display: flex;
-                flex-direction: row;
-                min-width: 350px;
-                height: 200px;
-                margin: 10px 0;
-            }
-
-            .desktopcardimage {
-                object-fit: contain;
-                border-bottom-left-radius: inherit;
-            }
-
-        }
-    }
-
-    @if $breakpoint ==mobile {
-        @media only screen and (max-width: 458px) {
-            @content;
-
-            .mobilecard {
-                display: flex;
-                flex-direction: column;
-                min-width: 350px;
-                height: 300px;
-                margin: 10px 0;
-            }
-
-            .mobilecardimage {
-                object-fit: cover;
-                height: 200px;
-            }
-        }
-    }
 }
