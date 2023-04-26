@@ -7,7 +7,7 @@ import { WorkexperiencecardComponent } from './workexperiencecard/workexperience
 
 const routes: Routes = [
 
-  { path: 'work', component: ExperienceDetailsComponent },
+  { path: 'work/:workname', component: ExperienceDetailsComponent },
   { path: '', component: HomeComponent },
   { path: '**', component: HomeComponent },
 ];

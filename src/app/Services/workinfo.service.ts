@@ -14,6 +14,7 @@ export class WorkinfoService {
   workDetails: any = [
     {
       "title": "Job One",
+      "jobname": "jobone",
       "subtitle": "small description of job test",
       "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
       "quickDescription": "quick description of job 1",
@@ -23,6 +24,7 @@ export class WorkinfoService {
     },
     {
       "title": "Job two",
+      "jobname": "jobtwo",
       "subtitle": "blahhhhhhhhhhhhhhhhhhhhhhh test",
       "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
       "quickDescription": "quick description of job 2",
@@ -32,6 +34,7 @@ export class WorkinfoService {
     },
     {
       "title": "Job three",
+      "jobname": "jobthree",
       "subtitle": "j;dljjfd test",
       "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
       "quickDescription": "quick description of job 3",

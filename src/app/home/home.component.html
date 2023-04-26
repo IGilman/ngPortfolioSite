@@ -9,4 +9,5 @@
     <p>Feel free to email if you have any questions at ENETER EMAIL HERE</p>
   </section>
 </div>
-<app-workexperiencecard *ngFor="let job of jobs" routerLink="work" [componentJob]="job"></app-workexperiencecard>
+<app-workexperiencecard *ngFor="let job of jobs" [routerLink]="['/work', job.jobname]"
+  [componentJob]="job"></app-workexperiencecard>

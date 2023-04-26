@@ -15,7 +15,7 @@ export class WorkexperiencecardComponent implements OnInit {
 
 
   ngOnInit() {
-    console.log(this.componentJob)
+    //console.log(this.componentJob)
     this.title = this.componentJob.title;
     this.subtitle = this.componentJob.subtitle;
     this.image = this.componentJob.image
