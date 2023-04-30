@@ -11,7 +11,7 @@ export class WorkinfoService {
   //constructor(private http: HttpClient) { }
   constructor() { }
 
-  workDetails: any = [
+  jobs: any = [
     {
       "title": "Job One",
       "jobname": "jobone",
@@ -46,9 +46,18 @@ export class WorkinfoService {
 
   //./src/assets/workdetials.json'
 
-  getWorkDetails(): any {
+  getJobs(): any {
 
-    return this.workDetails;
+    return this.jobs;
     //return this.http.get(url);
+  }
+
+  getJobDetail(jobname: string){
+    console.log("input")
+    console.log(jobname)
+    const job = this.jobs.find((x: { jobname: string; }) => x.jobname === jobname)
+    console.log("return")
+    console.log(job)
+    return job
   }
 }

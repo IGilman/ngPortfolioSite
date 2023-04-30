@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     //   console.log(this.test)
     // })
 
-    this.jobs = this.workinfoService.getWorkDetails()
+    this.jobs = this.workinfoService.getJobs()
   }
 
 }

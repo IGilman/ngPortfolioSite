@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable, map, switchMap } from 'rxjs';
+import { WorkinfoService } from '../Services/workinfo.service';
 
 @Component({
   selector: 'app-experience-details',
@@ -9,17 +10,28 @@ import { Observable, map, switchMap } from 'rxjs';
 })
 export class ExperienceDetailsComponent implements OnInit{
 
-  constructor(private route: ActivatedRoute){}
+  constructor(private route: ActivatedRoute, private workinfoService: WorkinfoService){}
 
-  job: any
+  jobName: any
+  jobDetails: any
 
   ngOnInit(){
     console.log("test")
     //this.job = this.route.snapshot.paramMap.get('workname')
     this.route.paramMap.subscribe((params: ParamMap)=>{
-      this.job = params.get('workname')
+      this.jobName = params.get('workname')
     })
-    console.log(this.job)
+    this.getJobDetails(this.jobName)
+    
+    console.log(this.jobName)
+  }
+
+  getJobDetails(jobname: string){
+    console.log("method param")
+    console.log(jobname)
+    this.jobDetails = this.workinfoService.getJobDetail(jobname)
+    console.log("jobDetails")
+    console.log(this.jobDetails)
   }
 
   //how do we send data via a router link to another component? 
