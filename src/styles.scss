@@ -2,10 +2,22 @@
 // For more information: https://material.angular.io/guide/theming
 //https://m3.material.io/theme-builder#/custom 
 //https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
-
 @use '@angular/material' as mat;
+@import 'styles/layout/media';
+
+
 
 @include mat.core();
+
+.test{
+    margin: 0 20px;
+}
+
+@include respond-to('large'){
+    .test{
+        margin: 0 120px;
+    }
+}
 
 // .mat-typography {
 //   
