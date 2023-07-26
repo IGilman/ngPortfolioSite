@@ -1,27 +1,35 @@
 <div class="body">
-  <section>
-    <h1>Hi, I'm Isaac</h1>
-    <p>I am a full stack software engineer with over 10 years of experience in the technology world and 3+ years of
-      experience as a softwar engineer.</p>
-    <p>Professionally, I am experienced in all things fin-tech especially as it relates to the Mortgage and Title
-      industries.</p>
-    <div class="contactinfo-container">
-      <p>Reach out to me here:</p>
-      <img src="../../assets/LI-In-Bug.png" alt="LinkedIn Logo">
-      <img src="../../assets/2021 Twitter logo - blue.png" alt="Twitter Logo">
-      <img src="../../assets/github-mark.png" alt="GitHub Logo">
+  <div class="home-text">
+    <div class="bio-container">
+      <h1>Hi, I'm Isaac</h1>
+      <p>I solve problems. I use a variety of tools, like code, and always aim to create great user experiences.
+        Professionaly, I have over 10 years of experience in technology in a variety of technical and non-technical
+        roles.</p>
+      <p>Feel free to email if you have any questions at gilman.isaac[at]gmail.com</p>
+      <p>See more about me here:</p>
+      <div class="contactinfo-container">
 
-        <a href="https://www.linkedin.com/in/isaacgilman/"></a>
-        <a href="https://twitter.com/IsaacGilman"></a> 
-        <a href="https://github.com/IGilman"></a> 
-
-
-
+        <a href="https://www.linkedin.com/in/isaacgilman/">
+          <img class="social-logo" src="../../assets/LI-In-Bug.png" alt="LinkedIn Logo">
+        </a>
+        <a href="https://twitter.com/IsaacGilman">
+          <img class="social-logo" src="../../assets/2021 Twitter logo - blue.png" alt="Twitter Logo">
+        </a>
+        <a href="https://github.com/IGilman">
+          <img class="social-logo" src="../../assets/github-mark.png" alt="GitHub Logo">
+        </a>
+      </div>
+      <!-- <p>You can find more on my LinkedIn and GitHub or check out some of my projects below.</p> -->
     </div>
 
-    <!-- <p>You can find more on my LinkedIn and GitHub or check out some of my projects below.</p>
-    <p>Feel free to email if you have any questions at gilman.isaac[at]gmail.com</p> -->
-  </section>
+    <div class="headshot-container">
+      <img class="headshot" src="../../assets/IsaacGilman-headshot.jpeg" alt="Isaac Gilman Headshot">
+    </div>
+  </div>
+
+  <div class="workcard-container">
+    <app-workexperiencecard *ngFor="let job of jobs" [routerLink]="['/work', job.jobname]"
+      [componentJob]="job"></app-workexperiencecard>
+  </div>
+
 </div>
-<app-workexperiencecard *ngFor="let job of jobs" [routerLink]="['/work', job.jobname]"
-  [componentJob]="job"></app-workexperiencecard>

@@ -1,10 +1,37 @@
+.home-text{
+    display: flex;
+}
+
+.bio-container{
+    flex: 1;
+}
+
+.headshot-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
 .contactinfo-container{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
 }
 
-img{
-    width: 100px;
+.social-logo{
+    height: 50px;
+    width: 50px;
     object-fit: contain;
+}
+
+.headshot{
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.workcard-container{
+    margin-top: 100px;
 }
