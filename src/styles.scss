@@ -1,11 +1,7 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-//https://m3.material.io/theme-builder#/custom 
-//https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
-@use '@angular/material' as mat;
-@import 'styles/layout/media';
-
-@include mat.core();
+@import 'styles/base';
+@import 'styles/variables';
+@import 'styles/theme';
+@import 'styles/breakpoints';
 
 .test{
     margin: 0 20px;
@@ -15,109 +11,4 @@
     .test{
         margin: 0 120px;
     }
-}
-
-// .mat-typography {
-//   
-// }
-
-$primary-palette: (
-    50: #e4f7ed,
-    100: #bdebd3,
-    200: #91ddb7,
-    300: #5dd19b,
-    //400 = primary
-    400: #23c685,
-    500: #00bb6f,
-    600: #00ac64,
-    700: #009956,
-    800: #00884a,
-    900: #006834,
-    contrast: (50: #000000,
-        100: #000000,
-        200: #000000,
-        300: #000000,
-        400: #000000,
-        500: #000000,
-        600: #000000,
-        700: #000000,
-        800: #FFFFFF,
-        900: #FFFFFF,
-    )
-);
-
-$secondary-palette: (
-    50: #eaf1ed,
-    100: #d1dbd3,
-    200: #b4c2b8,
-    300: #96a99c,
-    //400 = primary
-    400: #7f9687,
-    500: #698473,
-    600: #5d7464,
-    700: #4c6053,
-    800: #3c4c42,
-    900: #2a372f,
-    contrast: (50: #000000,
-        100: #000000,
-        200: #000000,
-        300: #000000,
-        400: #000000,
-        500: #000000,
-        600: #FFFFFF,
-        700: #FFFFFF,
-        800: #FFFFFF,
-        900: #FFFFFF,
-    )
-);
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-// TODO(v15): As of v15 mat.legacy-core no longer includes default typography styles.
-//  The following line adds:
-//    1. Default typography styles for all components
-//    2. Styles for typography hierarchy classes (e.g. .mat-headline-1)
-//  If you specify typography styles for the components you use elsewhere, you should delete this line.
-//  If you don't need the default component typographies but still want the hierarchy styles,
-//  you can delete this line and instead use:
-//    `@include mat.legacy-typography-hierarchy(mat.define-legacy-typography-config());`
-//@include mat.all-legacy-component-typographies();
-// @include mat.legacy-core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$primary: mat.define-palette($primary-palette);
-$accent: mat.define-palette($secondary-palette);
-
-// The warn palette is optional (defaults to red).
-$warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$light-theme: mat.define-light-theme((color: (primary: $primary,
-                accent: $accent,
-                warn: $warn,
-            ),
-            typography: mat.define-typography-config(),
-            density: 0,
-        ));
-
-
-@include mat.all-component-themes($light-theme);
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-//@include mat.all-legacy-component-themes($light-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }

@@ -1,0 +1,55 @@
+$breakpoints: (
+  'large': (min-width: 768px),
+);
+
+//https://m2.material.io/design/color/the-color-system.html#tools-for-picking-colors
+
+$primary-palette: (
+    50: #e4f7ed,
+    100: #bdebd3,
+    200: #91ddb7,
+    300: #5dd19b,
+    //400 = primary
+    400: #23c685,
+    500: #00bb6f,
+    600: #00ac64,
+    700: #009956,
+    800: #00884a,
+    900: #006834,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #000000,
+        700: #000000,
+        800: #FFFFFF,
+        900: #FFFFFF,
+    )
+);
+
+$secondary-palette: (
+    50: #f2e5f9,
+    100: #dfbef0,
+    200: #cb94e7,
+    300: #b568dd,
+    400: #a546d5,
+    500: #9524cc,
+    //600 = main secondary
+    600: #8523c6,
+    700: #6e20be,
+    800: #591db7,
+    900: #2618ab,
+    contrast: (50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #FFFFFF,
+        500: #FFFFFF,
+        600: #FFFFFF,
+        700: #FFFFFF,
+        800: #FFFFFF,
+        900: #FFFFFF,
+    )
+);

@@ -2,9 +2,9 @@
   <div class="home-text">
     <div class="bio-container">
       <h1>Hi, I'm Isaac</h1>
-      <p>I solve problems. I use a variety of tools, like code, and always aim to create great user experiences.
+      <p>I like solving problems and creating amazing user experiences. I use a variety of tools, like code and design thinking, to create impactful solutions.
         Professionaly, I have over 10 years of experience in technology in a variety of technical and non-technical
-        roles.</p>
+        roles. Currently, I am a Software Engineer at Amrock, part of Rocket Companies.</p>
       <p>Feel free to email if you have any questions at gilman.isaac[at]gmail.com</p>
       <p>See more about me here:</p>
       <div class="contactinfo-container">
@@ -31,5 +31,5 @@
     <app-workexperiencecard *ngFor="let job of jobs" [routerLink]="['/work', job.jobname]"
       [componentJob]="job"></app-workexperiencecard>
   </div>
-
+  <button mat-raised-button color="primary">Primary</button>
 </div>

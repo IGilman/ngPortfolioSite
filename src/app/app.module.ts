@@ -14,6 +14,8 @@ import { MatCardModule } from '@angular/material/card';
 import { ExperienceDetailsComponent } from './experience-details/experience-details.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -34,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatSidenavModule,
     MatDividerModule,
     MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
