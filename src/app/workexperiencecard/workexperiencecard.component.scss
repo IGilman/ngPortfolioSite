@@ -6,49 +6,105 @@
 //   padding: 10px;
 // }
 
+@use '@angular/material' as mat;
+
+
+// $primary: mat.define-palette($primary-palette);
+// $accent: mat.define-palette($secondary-palette);
+// $warn: mat.define-palette(mat.$red-palette);
+
+// $light-theme: mat.define-light-theme((
+//   color: (primary: $primary, accent: $primary, foreground: $primary),
+//         ));
+
+// @include mat.card-color($light-theme);
+//include mat.card-theme($light-theme);
+// .mat-mdc-card{
+//   background-color: green;
+// }
+
+.card{
+  display: flex;
+  flex-direction: row;
+  height: 200px;
+  margin: 20px 0;
+  //background-color: green;
+
+
+    &:hover{
+      @include mat.elevation(4, red);
+      border: 2px solid blue;
+    }
+    &:active {
+      @include mat.elevation(24, red);
+      background-color: aqua;
+    }
+
+
+
+
+
+  
+  // @include mat.elevation-transition();
+  // @include mat.elevation(12, green);
+
+
+}
+
+
+// .card-img{
+
+// }
+
+// .card:hover{
+//   border: 2px solid green;
+//   padding-bottom: 30px;
+//   object-fit: cover;
+// }
+
 $breakpoint: (
   "mobile": 0,
   "notmobile": 480px
 );
 
-@mixin mobile {
-  @media only screen and (min-width: map-get($breakpoint, "mobile")) {
-    @content;
-  }
-}
+// @mixin mobile {
+//   @media only screen and (min-width: map-get($breakpoint, "mobile")) {
+//     @content;
+//   }
+// }
 
-@mixin notmobile {
-  @media only screen and (min-width: map-get($breakpoint, "notmobile")) {
-    @content;
-  }
-}
+// @mixin notmobile {
+//   @media only screen and (min-width: map-get($breakpoint, "notmobile")) {
+//     @content;
+//   }
+// }
 
-.card {
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-    min-width: 350px;
-    height: 300px;
-    margin: 10px 0;
-  }
+// .card {
+//   @include mobile {
+//     display: flex;
+//     flex-direction: column;
+//     min-width: 350px;
+//     height: 300px;
+//     margin: 10px 0;
+//   }
 
-  @include notmobile {
-    display: flex;
-    flex-direction: row;
-    min-width: 350px;
-    height: 200px;
-    margin: 10px 0;
-  }
-}
+//   @include notmobile {
+//     display: flex;
+//     flex-direction: row;
+//     min-width: 350px;
+//     height: 200px;
+//     margin: 10px 0;
+//   }
+// }
 
-.image {
-  @include mobile {
-    object-fit: cover;
-    height: 200px;
-  }
+// .image {
+//   @include mobile {
+//     object-fit: cover;
+//     height: 200px;
+//   }
 
-  @include notmobile {
-    object-fit: contain;
-    border-bottom-left-radius: inherit;
-  }
-}
+//   @include notmobile {
+//     object-fit: contain;
+//     border-bottom-left-radius: inherit;
+//   }
+// }
