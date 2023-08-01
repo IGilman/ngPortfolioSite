@@ -9,13 +9,13 @@
       <p>See more about me here:</p>
       <div class="contactinfo-container">
 
-        <a href="https://www.linkedin.com/in/isaacgilman/">
+        <a href="https://www.linkedin.com/in/isaacgilman/" target="_blank">
           <img class="social-logo" src="../../assets/LI-In-Bug.png" alt="LinkedIn Logo">
         </a>
-        <a href="https://twitter.com/IsaacGilman">
+        <a href="https://twitter.com/IsaacGilman" target="_blank">
           <img class="social-logo" src="../../assets/2021 Twitter logo - blue.png" alt="Twitter Logo">
         </a>
-        <a href="https://github.com/IGilman">
+        <a href="https://github.com/IGilman" target="_blank">
           <img class="social-logo" src="../../assets/github-mark.png" alt="GitHub Logo">
         </a>
       </div>
@@ -29,7 +29,7 @@
 
   <div class="workcard-container">
     <app-workexperiencecard *ngFor="let job of jobs" [routerLink]="['/work', job.jobname]"
-      [componentJob]="job"></app-workexperiencecard>
+    [componentJob]="job"></app-workexperiencecard>
   </div>
   <button mat-raised-button color="primary">Primary</button>
 </div>
