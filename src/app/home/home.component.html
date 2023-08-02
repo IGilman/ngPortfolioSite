@@ -5,10 +5,7 @@
       <p>I like solving problems and creating amazing user experiences. I use a variety of tools, like code and design thinking, to create impactful solutions.
         Professionaly, I have over 10 years of experience in technology in a variety of technical and non-technical
         roles. Currently, I am a Software Engineer at Amrock, part of Rocket Companies.</p>
-      <p>Feel free to email if you have any questions - gilman.isaac[at]gmail.com</p>
-      <p>See more about me here:</p>
       <div class="contactinfo-container">
-
         <a href="https://www.linkedin.com/in/isaacgilman/" target="_blank">
           <img class="social-logo" src="../../assets/LI-In-Bug.png" alt="LinkedIn Logo">
         </a>
@@ -19,7 +16,7 @@
           <img class="social-logo" src="../../assets/github-mark.png" alt="GitHub Logo">
         </a>
       </div>
-      <!-- <p>You can find more on my LinkedIn and GitHub or check out some of my projects below.</p> -->
+      <p>Feel free to email if you have any questions - gilman.isaac[at]gmail.com</p>
     </div>
 
     <div class="headshot-container">
@@ -31,5 +28,4 @@
     <app-workexperiencecard *ngFor="let job of jobs" [routerLink]="['/work', job.jobname]"
     [componentJob]="job"></app-workexperiencecard>
   </div>
-  <button mat-raised-button color="primary">Primary</button>
 </div>

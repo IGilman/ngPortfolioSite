@@ -13,21 +13,21 @@ export class WorkinfoService {
 
   jobs: any = [
     {
-      "title": "Job One",
+      "title": "Amrock Connect Portal",
       "jobname": "jobone",
-      "subtitle": "small description of job test",
+      "subtitle": "Portal for users to complete to-dos and upload docs in the Title process",
       "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-      "quickDescription": "quick description of job 1",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "quickDescription": "Self-service customer portal for users to complete their Title and Closing process",
+      "description": "",
       "projectUrl": "https://www.freecodecamp.org/",
       "linkToProjectText": "Link to the project 1"
     },
     {
-      "title": "Job two",
+      "title": "Farebox",
       "jobname": "jobtwo",
       "subtitle": "blahhhhhhhhhhhhhhhhhhhhhhh test",
       "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-      "quickDescription": "quick description of job 2",
+      "quickDescription": "Booking and scheduling software for bus fleets ",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. At tellus at urna condimentum mattis pellentesque id. Ac turpis egestas integer eget aliquet. Fermentum iaculis eu non diam phasellus vestibulum lorem sed. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Vitae ultricies leo integer malesuada nunc vel. Morbi non arcu risus quis varius quam quisque. Risus at ultrices mi tempus imperdiet nulla. Sem viverra aliquet eget sit amet tellus cras adipiscing. Fermentum iaculis eu non diam phasellus vestibulum lorem sed risus. Venenatis cras sed felis eget velit aliquet sagittis. ",
       "projectUrl": "https://www.freecodecamp.org/",
       "linkToProjectText": "Link to the Project 2"

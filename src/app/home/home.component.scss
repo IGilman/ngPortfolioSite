@@ -39,8 +39,6 @@
 
 .headshot{
     height: 350px;
-    // width: 200px;
-    // object-fit: contain;
 }
 
 .workcard-container{
@@ -48,4 +46,12 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 100px;
+}
+
+@include styles.respond-to('small'){
+    .workcard-container{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 50px;
+    }
 }

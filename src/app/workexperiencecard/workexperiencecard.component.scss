@@ -3,7 +3,7 @@
 
 .card{
   //1024 if they were just one column
-  width: 752px;
+  width: 600px;
   display: flex;
   flex-direction: row;
   height: 200px;
@@ -24,49 +24,21 @@
   padding: 10px ;
 }
 
-$breakpoint: (
-  "mobile": 0,
-  "notmobile": 480px
-);
+@include styles.respond-to('large'){
+  .card{
+    width: 762px
+  }
+}
 
-// @mixin mobile {
-//   @media only screen and (min-width: map-get($breakpoint, "mobile")) {
-//     @content;
-//   }
-// }
-
-// @mixin notmobile {
-//   @media only screen and (min-width: map-get($breakpoint, "notmobile")) {
-//     @content;
-//   }
-// }
-
-// .card {
-//   @include mobile {
-//     display: flex;
-//     flex-direction: column;
-//     min-width: 350px;
-//     height: 300px;
-//     margin: 10px 0;
-//   }
-
-//   @include notmobile {
-//     display: flex;
-//     flex-direction: row;
-//     min-width: 350px;
-//     height: 200px;
-//     margin: 10px 0;
-//   }
-// }
-
-// .image {
-//   @include mobile {
-//     object-fit: cover;
-//     height: 200px;
-//   }
-
-//   @include notmobile {
-//     object-fit: contain;
-//     border-bottom-left-radius: inherit;
-//   }
-// }
+@include styles.respond-to('small'){
+  .card{
+      flex-direction: column;
+      width: auto;
+      height: auto;
+  }
+  
+  .card-img{
+    height: 200px;
+    object-fit: cover;
+  }
+}
