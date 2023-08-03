@@ -2,5 +2,20 @@
     <h1>{{jobDetails.title}}</h1>
     <h2>{{jobDetails.subtitle}}</h2>
     <a href={{jobDetails.projectUrl}}  target="_blank" rel="noopener noreferrer">{{jobDetails.linkToProjectText}}</a>
-    <p>{{jobDetails.description}}</p>
+    <!-- 
+        TODO: iterate over the duplicates, so this isn't hard coded 
+        TODO: ADD SCREEN SHOTS OF THE APPLICATIONS
+    -->
+    <div>
+        <h3>Tech Stack:</h3>
+        <ul>
+            <li>{{jobDetails.stack.frontend}}</li>
+            <li>{{jobDetails.stack.backend}}</li>
+            <li>{{jobDetails.stack.database}}</li>
+        </ul>
+    </div>
+
+    <p>{{jobDetails.description.descripparone}}</p>
+    <p>{{jobDetails.description.descrippartwo}}</p>  
+    <p>{{jobDetails.description.descripparthree}}</p>  
 
