@@ -58,6 +58,9 @@ export class WorkinfoService {
 
     return this.jobs;
     //return this.http.get(url);
+
+    //test this comment for automcommit ai
+    //making another change here
   }
 
   getJobDetail(jobname: string){
